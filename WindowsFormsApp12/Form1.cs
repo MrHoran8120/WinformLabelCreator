@@ -21,7 +21,7 @@ namespace WindowsFormsApp12
         private void button1_Click(object sender, EventArgs e)
         {
 
-            createLabels(10);
+            createLabels(10) ;
             calculatePositions();
 
         }
@@ -31,9 +31,16 @@ namespace WindowsFormsApp12
         {
             for (int i = 0; i < numberOfLabels; i++)
             {
+                // create the new label object
                 Label x = new Label();
+
+                // add the label object to the forms collection of controls
                 this.Controls.Add(x);
+
+                // add the label object to my list of labels
                 myLabels.Add(x);
+
+                // now format the label
                 x.Text = "TEST" + i;
                 x.Font = new Font("Arial", trackBar1.Value, FontStyle.Bold);
                 x.BackColor = Color.Blue;
